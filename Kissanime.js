@@ -18,7 +18,8 @@ $(document).ready(function() {
                  $("#slcQualix > option").each(function() {
                   if (this.text=="360p")
                       if (!this.selected)
-                           $("#slcQualix").val(this.value);
+                        // wait 5 sec before switching
+                           setTimeout(function(){$("#slcQualix").val(this.value);}, 5000);
                  });
               }
              
